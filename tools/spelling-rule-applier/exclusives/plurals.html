@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exclusive plural forms</title>
+
+        <link rel="stylesheet" href="../sources/stylesheet.css">
+        <link rel="icon" type="image/png" href="../sources/favicon.png" />
+        <style>
+            body {
+                background-image: url('../sources/cloud2a.jpg');
+            }
+        </style>
+        <script src="../sources/scrollControlJS.js" defer></script>
+        <script type="module" src="../sources/footer_update_version.js" defer></script>
+    </head>
+    <body>
+        <div class="page-wrapper">
+        <header role="banner">
+            <nav>
+                <a class="home" href="../lindex.html">🏠Homepage</a>
+                <a class="releases" href="../releases/releases.html">📈Releases</a>
+            </nav>
+            <h1>Plural exclusives</h1>
+            <noscript>
+                <p style="color: red;">JavaScript is required for this tool to work. Please enable JavaScript.</p>
+            </noscript>            
+        </header>
+
+        <section class="fire">
+            <h2>🔥f/fe Exceptions</h2>
+            <ul>
+                
+            </ul>
+        </section>
+
+        <section class="sun">
+            <h2>🌞 o Exceptions</h2>
+            <ul>
+                
+            </ul>
+        </section>
+
+        <section class="forest">
+            <h2>🌿 Plural as same as singular</h2>
+            <ul>
+                
+            </ul>
+        </section>
+
+        <section class="space">
+            <h2>🌌 Other exceptions</h2>
+            <ul>
+                
+            </ul>
+        </section>
+        </div> <!-- Closing the page-wrapper div -->
+        <script type="module">
+            import { plural_exclusives } from '../sources/pluralJS/exclusives.js';
+
+            const sectionsMap = {
+                "f / fe exceptions": document.querySelector('.fire ul'),
+                "o exceptions": document.querySelector('.sun ul'),
+                "plural as same as singular": document.querySelector('.forest ul'),
+                "else exceptions": document.querySelector('.space ul')
+            };
+
+            for (const [category, ulElement] of Object.entries(sectionsMap)) {
+                if (!ulElement) continue;
+                const listItems = Object.entries(plural_exclusives[category])
+                    .map(([word, plural]) => `<li>${word} → <strong>${plural}</strong></li>`)
+                    .join('');
+                ulElement.innerHTML = listItems;
+            }
+        </script>
+        <a href="#top" class="scroll-top" aria-label="Back to top">⬆︎ Back to top</a>
+
+        <footer>
+            <p>© 2025 The ULTIMATE Spelling Rule Applier by <a href="https://github.com/urbanetrex">urbanetrex</a>.</p>
+            <p>Version <span class="footer-mark-version">Loading/Unknown</span>. For more information, visit our <a href="../releases/releases.html">Releases Page</a>.</p>
+            <p>Contribute here on GitHub: <a href="https://github.com/urbanetrex/cdn/tree/main/html/SM-LVD">https://github.com/urbanetrex/cdn/tree/main/html/SM-LVD</a></p>
+        </footer>
+    </body>
+</html>

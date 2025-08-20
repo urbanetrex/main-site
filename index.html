@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tool and Journal Centre</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .menu-bar {
+      display: flex;
+      align-items: center;
+      background: #2c3e50;
+      padding: 0.75rem 1.5rem;
+      color: white;
+    }
+
+    .menu-bar-logo-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-right: 2rem;
+    }
+
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .menu > li {
+      position: relative;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0.5rem;
+      display: block;
+      transition: color 0.2s;
+    }
+
+    .menu a:hover {
+      color: #1abc9c;
+    }
+
+    /* Dropdown */
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #34495e;
+      min-width: 200px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-radius: 0 0 6px 6px;
+    }
+
+    .submenu li {
+      position: relative;
+    }
+
+    .submenu a {
+      padding: 0.5rem 1rem;
+    }
+
+    .menu > li:hover > .submenu,
+    .submenu li:hover > .submenu {
+      display: block;
+    }
+
+    .submenu .submenu {
+      top: 0;
+      left: 100%;
+      border-radius: 6px;
+    }
+
+    .has-submenu > a::after {
+      content: " ▸";
+      float: right;
+    }
+
+    .submenu.flip {
+        left: auto;
+        right: 100%;
+    }
+
+  </style>
+  <script scr="./assets/js/menu-bar-expandable.js" defer></script>
+</head>
+<body>
+  <div class="menu-bar">
+    <div class="menu-bar-logo-title">Tool and Journal Centre</div>
+    <ul class="menu">
+      <li class="has-submenu">
+        <a href="./tools/tindex.html">Tools</a>
+        <ul class="submenu">
+          <li><a href="./tools/spelling-rule-applier.html">Spelling Rule Applier</a></li>
+          <li class="has-submenu">
+            <a href="#">Math</a>
+            <ul class="submenu">
+              <li><a href="./tools/math/fraction-conversion.html">Fraction Conversion</a></li>
+              <li class="has-submenu">
+                <a href="#">Modelling</a>
+                <ul class="submenu">
+                  <li><a href="./tools/math/modelling/fractions.html">Fractions</a></li>
+                  <li><a href="./tools/math/modelling/problem-solving-bars.html">Problem-Solving Bars</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href="./learning-journals/lindex.html">Learning Journals</a></li>
+    </ul>
+  </div>
+</body>
+</html>
+
+
+<!--
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The ULTIMATE Spelling Rule Applier!!!</title>
+    
+    <link rel="stylesheet" href="./sources/stylesheet.css">
+    <link rel="icon" type="image/png" href="./sources/favicon.png" />
+    <style>
+        body {
+            background-image: url('./sources/cloud2a.jpg');
+        }
+    </style>
+    <script type="module" src="./sources/coreJS.js" defer></script>
+    <script src="./sources/scrollControlJS.js" defer></script>
+    <script type="module" src="./sources/footer_update_version.js" defer></script>
+</head>
+<body>
+    <div class="page-wrapper">
+    <header id="top">
+        <nav>
+            <a class="releases" href="./releases/releases.html">📈Releases</a>
+        </nav>
+        <h1>The ULTIMATE Spelling Rule Applier!!!</h1>
+        <noscript>
+            <p style="color: red;">JavaScript is required for this tool to work. Please enable JavaScript.</p>
+        </noscript>        
+    </header>
+
+    <section class="fire" id="prep" aria-label="Character Classification">
+        <h2>🔥 Prep Prepares!</h2>
+        <p>Character detection – Vowel or Consonant?</p>
+        <input type="text" id="charInput" maxlength="1" placeholder="Enter a letter">
+        <button id="analyze">Analyze</button>
+        <div id="charResult" class="result js-edit-box"></div>
+        <br>
+        <a href="./tsrules.html#prep" class="more-info">ℹ️More Info</a>
+    </section>
+
+    <section class="sun" id="vowel-consonant" aria-label="Vowel/Consonant Pattern">
+        <h2>🌞 Rocketin' Ahead</h2>
+        <p>Vowel/Consonant String Identifier</p>
+        <input type="text" id="vcStringInput" placeholder="Enter a string">
+        <button id="pattern">Get Pattern</button>
+        <div id="vcResult1" class="result js-edit-box"></div>
+        <div id="vcResult2" class="result js-edit-box"></div>
+        <br>
+        <a href="./tsrules.html#vowel-consonant" class="more-info">ℹ️More Info</a>
+    </section>
+
+    <section class="forest" id="morphograph" aria-label="Morphograph Combiner">
+        <h2>🌿 Be an Expert</h2>
+        <p>Combine Two Morphographs</p>
+        <input type="text" id="morph1" placeholder="First morphograph">
+        <input type="text" id="morph2" placeholder="Second morphograph">
+        <button id="combine">Combine</button>
+        <div id="combineResult" class="result js-edit-box"></div>
+        <div id="combineRule" class="result js-edit-box"></div>
+        <br>
+        <a href="./tsrules.html#morphograph" class="more-info">ℹ️More Info</a>
+    </section>
+
+    <section class="space" id="rules" aria-label="Pluralization">
+        <h2>🌌 Go Pro!</h2>
+        <p>Pluralize a Word</p>
+        <input type="text" id="pluralInput" placeholder="Enter a word">
+        <button id="pluralize">Pluralize</button>
+        <div id="pluralResult" class="result js-edit-box"></div>
+        <div id="pluralRule" class="result js-edit-box"></div>
+        <br>
+        <a href="./tsrules.html#rules" class="more-info">ℹ️More Info</a>
+    </section>
+
+    </div>
+
+    <a href="#top" class="scroll-top" aria-label="Back to top">⬆︎ Back to top</a>
+
+    <footer>
+        <p>© 2025 The ULTIMATE Spelling Rule Applier by <a href="https://github.com/urbanetrex">urbanetrex</a>.</p>
+        <p>Version <span class="footer-mark-version">Loading/Unknown</span>. For more information, visit our <a href="./releases/releases.html">Releases Page</a>.</p>
+        <p>Contribute here on GitHub: <a href="https://github.com/urbanetrex/cdn/tree/main/html/SM-LVD">https://github.com/urbanetrex/cdn/tree/main/html/SM-LVD</a></p>
+    </footer>
+</body>
+</html>

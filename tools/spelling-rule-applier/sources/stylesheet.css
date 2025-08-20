@@ -1,0 +1,233 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .scroll-top {
+    position: fixed;
+    bottom: 150px;
+    right: -150px;
+    color: black;
+    padding: 0.7em 1em;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, right 0.3s ease;
+    z-index: 1001;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #add8e6, #7cfc00, #ffd700, #f08080); /* lightblue, lawngreen, gold, lightcoral */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 150px;
+  }
+  
+  .scroll-top:hover {
+    right: 0px;
+  }
+  
+  .scroll-top.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-repeat: repeat;
+    background-size: 200px;
+    background-attachment: fixed;
+    background-color: #dfe9f3;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* background: rgba(255, 255, 255, 0.5); optional veil */
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, lightblue, lawngreen, gold, lightcoral);
+    padding: 30px;
+}
+
+header .home, header .releases{
+    align-self: flex-start;
+    margin-top: 0;       /* Remove default spacing above */
+    margin-bottom: 10px; /* Keep some space below */
+    font-size: 14px;
+    text-align: left;
+    color: white;
+    border: 4px solid darkseagreen;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    background-color: darkolivegreen;
+}
+
+header .home:hover, header .releases:hover,
+header .home:focus, header .releases:focus {
+    border-color: darkolivegreen;
+    background-color: darkseagreen;
+    color: black;
+}
+
+header nav{
+    display: flex; gap: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+section {
+    border: 10px solid;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.fire { border-color: red; background-color: lightcoral; color: white; }
+.sun { border-color: gold; background-color: lemonchiffon; color: black; }
+.forest { border-color: forestgreen; background-color: honeydew; color: darkgreen; }
+.space { border-color: navy; background-color: rgb(65, 65, 147); color: white; }
+/*links should be colored too*/
+.fire a,
+.fire a:visited {
+    color: white;
+    position: relative;
+}
+
+.sun a,
+.sun a:visited {
+    color: black;
+    position: relative;
+}
+
+.forest a,
+.forest a:visited {
+    color: darkgreen;
+    position: relative;
+}
+
+.space a,
+.space a:visited {
+    color: white;
+    position: relative;
+}
+
+/* Optional hover for clarity */
+.fire a:hover,
+.sun a:hover,
+.forest a:hover,
+.space a:hover {
+    text-decoration: underline;
+}
+
+/*look buttons*/
+.fire a.tryit, .fire a.more-info,
+.sun a.tryit, .sun a.more-info,
+.forest a.tryit, .forest a.more-info,
+.space a.tryit, .space a.more-info {
+    background-color: blue;
+    padding: 5px;
+    border: 3px solid skyblue;
+    border-radius: 3px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/*these are clickable...*/
+.fire a.tryit:hover, .fire a.more-info:hover,
+.sun a.tryit:hover, .sun a.more-info:hover,
+.forest a.tryit:hover, .forest a.more-info:hover,
+.space a.tryit:hover, .space a.more-info:hover,
+.fire a.tryit:focus, .fire a.more-info:focus,
+.sun a.tryit:focus, .sun a.more-info:focus,
+.forest a.tryit:focus, .forest a.more-info:focus,
+.space a.tryit:focus, .space a.more-info:focus {
+    background-color: skyblue;
+    border-color: blue;
+    outline: none;
+    color: black;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+button {
+    position: relative;
+    z-index: 1;
+  }
+
+  
+button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: auto; /* Important: keep events enabled */
+}
+
+.js-edit-box {
+    display: block;
+  }
+
+  .js-edit-box:empty {
+    display: none;
+  }
+  
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .page-wrapper {
+    min-height: calc(100vh - 150px); /* subtract your footer height */
+  }
+  
+  footer {
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: purple solid 5px;
+    padding: 20px;
+    color: white;
+  }
+  
+  footer a {
+    color: white;
+  }
