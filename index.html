@@ -17,25 +17,7 @@
       color: white;
     }
 
-    .menu-bar-logo-title {
-      font-size: 1.25rem;
-      font-weight: bold;
-      margin-right: 2rem;
-    }
-
-    .menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .menu > li {
-      position: relative;
-    }
-
-    .menu a {
+    .menu-bar-item {
       color: white;
       text-decoration: none;
       font-size: 1rem;
@@ -44,81 +26,25 @@
       transition: color 0.2s;
     }
 
-    .menu a:hover {
+    .menu-bar-logo-title {
+      color: white;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-right: 2rem;
+    }
+
+    .menu-bar a:hover {
       color: #1abc9c;
     }
-
-    /* Dropdown */
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #34495e;
-      min-width: 200px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      border-radius: 0 0 6px 6px;
-    }
-
-    .submenu li {
-      position: relative;
-    }
-
-    .submenu a {
-      padding: 0.5rem 1rem;
-    }
-
-    .menu > li:hover > .submenu,
-    .submenu li:hover > .submenu {
-      display: block;
-    }
-
-    .submenu .submenu {
-      top: 0;
-      left: 100%;
-      border-radius: 6px;
-    }
-
-    .has-submenu > a::after {
-      content: " ▸";
-      float: right;
-    }
-
-    .submenu.flip {
-        left: auto;
-        right: 100%;
-    }
-
   </style>
   <script scr="./assets/js/menu-bar-expandable.js" defer></script>
 </head>
 <body>
   <div class="menu-bar">
-    <div class="menu-bar-logo-title">Tool and Journal Centre</div>
-    <ul class="menu">
-      <li class="has-submenu">
-        <a href="./tools/tindex.html">Tools</a>
-        <ul class="submenu">
-          <li><a href="./tools/spelling-rule-applier.html">Spelling Rule Applier</a></li>
-          <li class="has-submenu">
-            <a href="#">Math</a>
-            <ul class="submenu">
-              <li><a href="./tools/math/fraction-conversion.html">Fraction Conversion</a></li>
-              <li class="has-submenu">
-                <a href="#">Modelling</a>
-                <ul class="submenu">
-                  <li><a href="./tools/math/modelling/fractions.html">Fractions</a></li>
-                  <li><a href="./tools/math/modelling/problem-solving-bars.html">Problem-Solving Bars</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li><a href="./learning-journals/lindex.html">Learning Journals</a></li>
+    <a class="menu-bar-logo-title" href="./index.html">Tool and Journal Centre</a>
+    <a class="menu-bar-item" href="./tools/tindex.html">Tools</a>
+    <a class="menu-bar-item" href="./learning-journals/lindex.html">Learning Journals</a>
     </ul>
   </div>
 </body>
